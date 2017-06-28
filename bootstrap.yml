@@ -1,0 +1,10 @@
+
+---
+- hosts: localhost
+  connection: local
+
+  tasks:
+
+    - name: display host operating system
+      debug: msg="{{ ansible_distribution }}"
+
