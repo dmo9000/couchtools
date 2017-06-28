@@ -8,3 +8,6 @@
     - name: display host operating system
       debug: msg="{{ ansible_distribution }}"
 
+    - name: include Windows plays
+      include: include/windows.yml
+      when: ansible_distribution == "CYGWIN_NT-6.1"
