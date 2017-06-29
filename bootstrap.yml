@@ -11,3 +11,7 @@
     - name: include Windows plays
       include: include/windows.yml
       when: ansible_distribution == "CYGWIN_NT-6.1"
+
+    - name: include Linux plays
+      include: include/linux.yml
+      when: ansible_distribution == "Fedora"
