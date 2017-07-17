@@ -1,2 +1,10 @@
 
   - debug: msg="Running on {{ ansible_distribution }}"
+
+  - package:
+      name: "{{ item }}"
+      state: installed
+    become: true
+    with_items: ['liberation-serif-fonts', 'liberation-fonts-common',
+                 'liberation-mono-fonts', 'liberation-sans-fonts']
+
